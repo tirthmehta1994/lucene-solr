@@ -68,6 +68,11 @@
       <AppenderRef ref="SlowLogFile"/>
     </AsyncLogger>
 
+    <Logger name="org.apache.solr.update.processor.LogDeleteQueryProcessorFactory" level="warn"/>
+    <Logger name="org.apache.solr.update.processor.LogDeleteQueryProcessorFactory.delete" level="info" additivity="false">
+      <AppenderRef ref="DeleteFile"/>
+    </Logger>
+
     <AsyncRoot level="info">
       <AppenderRef ref="MainLogFile"/>
       <AppenderRef ref="STDOUT"/>
